@@ -1,0 +1,65 @@
+name: AI開発作業
+description: コード変更前の計画と引き継ぎ情報を記録する
+title: "[開発] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        コード変更を始める前に、このIssueを作成または既存Issueを更新してください。個人情報・認証情報は記入しないでください。
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的
+      description: 何を、なぜ実現するか
+    validations:
+      required: true
+  - type: textarea
+    id: current-state
+    attributes:
+      label: 現状
+      description: 確認済みの構造、仕様、問題。未確認ならその旨を書く
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: 作業計画
+      description: 調査、実装、確認をチェックリストで記入する
+      placeholder: "- [ ] 現状確認\n- [ ] 実装\n- [ ] 動作確認"
+    validations:
+      required: true
+  - type: textarea
+    id: files-to-change
+    attributes:
+      label: 変更予定ファイル
+      description: 未確定なら調査対象と確定方法を書く
+    validations:
+      required: true
+  - type: textarea
+    id: files-not-to-change
+    attributes:
+      label: 変更しないファイル
+      description: 対象外のファイル。該当なしなら「なし」と書く
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 完成条件
+      description: 結果を判定できる条件を書く
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: テスト項目
+      description: 正常系、失敗時、既存機能への影響を含める
+    validations:
+      required: true
+  - type: input
+    id: branch
+    attributes:
+      label: 作業ブランチ
+      placeholder: "feat/issue-123-example"
+    validations:
+      required: true

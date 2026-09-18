@@ -1,0 +1,51 @@
+name: 不具合
+description: 再現方法と影響を記録する。修正前に作業計画も記入する
+title: "[不具合] "
+body:
+  - type: textarea
+    id: symptom
+    attributes:
+      label: 症状と影響
+      description: 個人情報・認証情報を除いて記入する
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 再現手順・期待結果・実際の結果
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: エラー・ログ・原因の確認状況
+      description: 推測と確認済みの事実を区別する
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: 目的・現状・作業計画
+      description: 修正作業を始める前に記入する
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 変更予定ファイル・変更しないファイル
+      description: それぞれ分けて記入する
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 完成条件・テスト項目
+      description: 再発防止と既存機能への影響も記入する
+    validations:
+      required: true
+  - type: input
+    id: branch
+    attributes:
+      label: 作業ブランチ
+    validations:
+      required: true
