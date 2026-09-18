@@ -1,0 +1,45 @@
+name: 機能追加
+description: 利用者の目的と実装前の計画を記録する
+title: "[機能] "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: 利用者と目的
+      description: 誰が何をできるようにしたいか
+    validations:
+      required: true
+  - type: textarea
+    id: current-state
+    attributes:
+      label: 現状
+      description: 既存仕様と関連する機能
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: 作業計画
+      description: 調査、実装、確認をチェックリストで記入する
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 変更予定ファイル・変更しないファイル
+      description: それぞれ分けて記入する
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 完成条件・テスト項目
+      description: PC・スマートフォン、入力ミス、既存機能への影響などを検討する
+    validations:
+      required: true
+  - type: input
+    id: branch
+    attributes:
+      label: 作業ブランチ
+    validations:
+      required: true
